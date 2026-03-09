@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FAF8F5;
+    color: #1C1C1E;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-charcoal text-cream font-body font-medium px-7 py-3 rounded-full 
+           transition-all duration-300 hover:bg-gold hover:text-charcoal 
+           active:scale-95 tracking-wide text-sm;
+  }
+
+  .btn-ghost {
+    @apply border border-charcoal/20 text-charcoal font-body font-medium px-7 py-3 rounded-full 
+           transition-all duration-300 hover:border-charcoal hover:bg-charcoal hover:text-cream
+           active:scale-95 tracking-wide text-sm;
+  }
+
+  .card-shadow {
+    box-shadow: 0 2px 20px rgba(28, 28, 30, 0.06), 0 1px 4px rgba(28, 28, 30, 0.04);
+  }
+
+  .card-shadow-hover {
+    box-shadow: 0 12px 40px rgba(28, 28, 30, 0.12), 0 4px 12px rgba(28, 28, 30, 0.06);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 3px;
+}
